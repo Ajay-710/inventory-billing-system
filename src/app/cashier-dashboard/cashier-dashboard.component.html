@@ -1,0 +1,108 @@
+<!-- src/app/cashier-dashboard/cashier-dashboard.component.html -->
+
+<div class="dashboard-container">
+  <!-- Header Section -->
+  <header class="header-section card">
+    <h1 class="section-title">Cashier Dashboard</h1>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="main-section">
+    <div class="card">
+      <h2 class="section-title">Quick Add Products</h2>
+      <div class="quick-add-container">
+        <!-- Replace with your actual product buttons -->
+        <button class="quick-add-btn">Banarasi Silk Saree (₹1899.00)</button>
+        <button class="quick-add-btn">Kanchipuram Pure Silk (₹2499.00)</button>
+        <button class="quick-add-btn">Cotton Printed Saree (₹799.00)</button>
+        <button class="quick-add-btn">Georgette Party Wear (₹1299.00)</button>
+        <button class="quick-add-btn">Anarkali Dress (₹1499.00)</button>
+        <button class="quick-add-btn">Straight Cut Kurti (₹999.00)</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Customer & Product Entry</h2>
+      <div class="input-group">
+        <input class="form-input" type="text" placeholder="Customer Name (Optional)">
+        <input class="form-input" type="text" placeholder="Customer Phone (Optional)">
+        <select class="form-input" style="width: auto;">
+          <option>Cash</option>
+          <option>Card</option>
+          <option>UPI</option>
+        </select>
+      </div>
+      <div class="input-group" style="margin-top: 16px;">
+        <input class="form-input" type="text" placeholder="Enter or scan Product ID">
+        <button class="add-product-btn">Add Product</button>
+      </div>
+    </div>
+    
+    <div class="card" style="flex-grow: 1; display: flex; flex-direction: column;">
+      <table class="billing-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Discount ($)</th>
+            <th>Subtotal</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Your table rows will be generated here -->
+          <!-- Example Row: -->
+          <!-- <tr>
+            <td>Sample Product</td>
+            <td>1</td>
+            <td>₹100.00</td>
+            <td>₹0.00</td>
+            <td>₹100.00</td>
+            <td><button style="color: red;">Remove</button></td>
+          </tr> -->
+        </tbody>
+      </table>
+
+      <!-- Billing Summary -->
+      <div class="billing-summary">
+        <div class="summary-row">
+          <span>Grand Total:</span>
+          <span class="grand-total">₹0.00</span>
+        </div>
+        <div class="summary-row">
+          <label for="cash-tendered">Cash Tendered:</label>
+          <input id="cash-tendered" class="form-input" type="number" value="0" style="width: 120px; text-align: right;">
+        </div>
+        <div class="summary-row">
+          <span>Change Due:</span>
+          <span class="change-due">₹0.00</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Sidebar Section -->
+  <aside class="sidebar-section">
+    <div class="card" style="display: flex; flex-direction: column; gap: 16px;">
+      <button class="sidebar-btn finalize-btn">Finalize Bill</button>
+      <button class="sidebar-btn hold-btn">Hold Bill</button>
+      <button class="sidebar-btn logout-btn">Logout</button>
+    </div>
+    <div class="card">
+      <h3 class="section-title">Past Bills (Last 5)</h3>
+      <ul class="bill-list">
+        <li class="no-bills-message">No bills recorded yet.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 class="section-title">Held Bills (0)</h3>
+      <ul class="bill-list">
+        <li class="no-bills-message">No transactions currently on hold.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top: auto;">
+       <button class="sidebar-btn print-btn">Print Bill</button>
+    </div>
+  </aside>
+</div>

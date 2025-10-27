@@ -1,0 +1,46 @@
+/* src/styles.css */
+
+/* 1. Import a modern, clean font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* 2. Define a professional color palette and variables */
+:root {
+  --transition-speed: 0.2s ease-in-out;
+  --font-sans: 'Inter', sans-serif;
+  
+  --bg-color: #f4f7fa; /* Light, clean background */
+  --card-bg-color: #ffffff;
+  --border-color: #e2e8f0;
+  
+  --text-primary: #1a202c; /* Dark text for headings */
+  --text-secondary: #4a5568; /* Lighter text for descriptions */
+  
+  --primary-color: #4f46e5; /* A strong, modern purple/blue */
+  --primary-color-hover: #4338ca;
+  
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+  
+  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --card-radius: 0.75rem; /* 12px */
+}
+
+/* 3. Apply modern resets and defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+}
